@@ -1,5 +1,5 @@
 # FILAS Y COLUMNAS
-Proyectos, datasets, gráficos y artículos de la newsletter https://filasycolumnas.substack.com/
+Proyectos, datasets y artículos de la newsletter https://filasycolumnas.substack.com/
 
 ---
 
