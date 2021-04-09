@@ -1,5 +1,5 @@
-# Repositorio de FILAS Y COLUMNAS
-Repositorio con los análisis de datos y los artículos de la newsletter https://filasycolumnas.substack.com/
+# FILAS Y COLUMNAS
+Proyectos, datasets, gráficos y artículos de la newsletter https://filasycolumnas.substack.com/
 
 ---
 
