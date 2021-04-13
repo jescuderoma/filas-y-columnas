@@ -1,6 +1,6 @@
-# Título del proyecto
+# % ERTE sobre afiliados por sectores
 
-Descripción del proyecto
+Código, datasets y análisis exploratorio de datos para el artículo [*Los ERTE echan raíces en 25 sectores*](https://filasycolumnas.substack.com/p/los-erte-echan-raices-en-25-sectores) publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
 
 ---
 
