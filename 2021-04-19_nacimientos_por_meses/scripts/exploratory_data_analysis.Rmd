@@ -1,0 +1,247 @@
+---
+title: "Análisis exploratorio de datos"
+author: "Jesús Escudero"
+date: "19/4/2021"
+output:
+    html_document:
+        theme: sandstone
+        toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# Cargar librerías e importar tidy data
+```{r cargar librerías importar datos}
+
+## fijar directorio base y cargar librerías
+setwd("F:/GitHub/filas-y-columnas/2021-04-19_nacimientos_por_meses")
+
+library(ggplot2)
+library(gganimate)
+library(viridis)
+
+
+## importar tidy data
+source("scripts/data_tidying.R")
+
+```
+
+---
+
+# Resultados del análisis
+
+## Distribución mensual de los nacimientos de cada año (1975-2019)
+
+```{r gráfico lineas años, echo = F, fig.height = 7, fig.width = 12}
+
+ggplot(tidy_data,
+       aes(x = mes, y = nacidos_mes_pct, color = ano, group = ano)) +
+    geom_line(size = 1.5) +
+    geom_segment(color = "grey10", x = .5, xend = 12.5, y = 8.333, yend = 8.333, size = 1.2) +
+    ylim (7,9.5) +
+    scale_color_viridis(option="magma", direction = -1) +
+    theme_minimal() +
+    theme(text = element_text(family = "Open Sans"),
+          plot.title = element_text(face = "bold", size = 18, color = "grey10"),
+          plot.subtitle = element_text(size = 14, color = "grey30"),
+          plot.caption = element_text(size = 11, face = "italic", color = "grey30", hjust=c(0, 1)),
+          axis.title = element_text(size = 14, color = "grey30"),
+          axis.text = element_text(size = 11, color = "grey40"),
+          strip.text = element_text(size = 12, face = "bold", color = "grey10"),
+          plot.margin = margin(10, 20, 10, 20),
+          plot.title.position = "plot",
+          plot.caption.position = "plot",
+          legend.position = "top",
+          legend.title = element_blank(),
+          legend.key.width =  unit(5, "lines"),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_line(size = .5),
+          panel.grid.minor.y = element_line(size = .5, linetype = "longdash"),
+          axis.ticks = element_blank()) +
+    labs(title= "", subtitle= "", caption= "", x = "", y = "")
+
+```
+
+```{r gráfico líneas meses, echo = F, fig.height = 8, fig.width = 12}
+
+ggplot(tidy_data,
+       aes(x = ano, y = nacidos_mes_pct, color = nacidos_mes_pct)) +
+    geom_segment(color = "grey10", x = 1975, xend = 2019, y = 8.333, yend = 8.333, size = .75) +
+    geom_line(size = 1) +
+    geom_smooth() +
+    facet_wrap(~mes, ncol = 12) +
+    ylim (7,9.5) +
+    scale_color_viridis(option="magma", direction = 1) +
+    scale_x_continuous(breaks=c(1975, 2019)) +
+    theme_minimal() +
+    theme(text = element_text(family = "Open Sans"),
+          plot.title = element_text(face = "bold", size = 18, color = "grey10"),
+          plot.subtitle = element_text(size = 14, color = "grey30"),
+          plot.caption = element_text(size = 11, face = "italic", color = "grey30", hjust=c(0, 1)),
+          axis.title = element_text(size = 14, color = "grey30"),
+          axis.text = element_text(size = 11, color = "grey40"),
+          strip.text = element_text(size = 12, face = "bold", color = "grey10"),
+          plot.margin = margin(10, 20, 10, 20),
+          plot.title.position = "plot",
+          plot.caption.position = "plot",
+          legend.position = "top",
+          legend.title = element_blank(),
+          legend.key.width =  unit(5, "lines"),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_line(size = .5),
+          panel.grid.minor.y = element_line(size = .5, linetype = "longdash"),
+          axis.ticks = element_blank()) +
+    labs(title= "", subtitle= "", caption= "", x = "", y = "")
+
+```
+
+```{r tabla colores, echo = F, fig.height = 12, fig.width = 12}
+ggplot(tidy_data,
+       aes(x = mes, y = reorder(ano, desc(ano)), fill = nacidos_mes_pct)) +
+    geom_tile() +
+    geom_text(aes(label = etiqueta)) +
+    scale_fill_gradient2(midpoint=8.333, low="blue", high="red", limits=c(7.35, 9.4)) +
+    scale_x_discrete(position = "top") +
+    theme_minimal() +
+    theme(text = element_text(family = "Open Sans"),
+          plot.title = element_text(face = "bold", size = 18, color = "grey10"),
+          plot.subtitle = element_text(size = 14, color = "grey30"),
+          plot.caption = element_text(size = 11, face = "italic", color = "grey30", hjust=c(0, 1)),
+          axis.title = element_text(size = 14, color = "grey30"),
+          axis.text = element_text(size = 11, color = "grey40"),
+          strip.text = element_text(size = 12, face = "bold", color = "grey10"),
+          plot.margin = margin(10, 20, 10, 20),
+          plot.title.position = "plot",
+          plot.caption.position = "plot",
+          legend.position = "top",
+          legend.title = element_blank(),
+          legend.key.width =  unit(5, "lines"),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          axis.ticks = element_blank()) +
+    labs(title= "", subtitle= "", caption= "", x = "", y = "")
+```
+
+---
+
+## Evolución nacimientos en mayo y octubre
+
+```{r nacimientos mayo octubre, echo = F, fig.height = 8, fig.width = 12}
+
+mayo_octubre <- tidy_data %>% 
+    filter(mes%in%c("may", "oct"))
+
+ggplot(mayo_octubre,
+       aes(x = ano, y = nacidos_mes_pct, color = mes)) + 
+    geom_segment(color = "grey10", x = 1975, xend = 2019, y = 8.333, yend = 8.333, size = .75) +
+    geom_line(size = 1.5) +
+    geom_smooth() +
+    ylim (8,9.5) +
+    theme_minimal() +
+    theme(plot.title = element_text(face = "bold", size = 18, color = "grey10"),
+          plot.subtitle = element_text(size = 14, color = "grey30"),
+          plot.caption = element_text(size = 11, face = "italic", color = "grey30", hjust=c(0, 1)),
+          axis.title = element_text(size = 14, color = "grey30"),
+          axis.text = element_text(size = 11, color = "grey40"),
+          strip.text = element_text(size = 12, face = "bold", color = "grey10"),
+          plot.margin = margin(10, 20, 10, 20),
+          plot.title.position = "plot",
+          plot.caption.position = "plot",
+          legend.position = "top",
+          legend.title = element_blank(),
+          legend.key.width =  unit(5, "lines"),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_line(size = .5),
+          panel.grid.minor.y = element_line(size = .5, linetype = "longdash"),
+          axis.ticks = element_blank()) +
+    labs(title= "", subtitle= "", caption= "", x = "", y = "")
+
+```
+
+---
+
+## Evolución nacimientos en abril-mayo Vs. septiembre-octubre
+
+```{r nacimientos abri-mayo septiembre-octubre, echo = F, fig.height = 8, fig.width = 12}
+
+abril_septiembre <- tidy_data %>% 
+    select(ano, mes, nacidos_mes_pct) %>% 
+    filter(mes%in%c("abr", "may", "sep", "oct")) %>% 
+    pivot_wider(names_from = "mes", values_from = "nacidos_mes_pct") %>% 
+    mutate(abril_mayo=abr+may,
+           septiembre_octubre=sep+oct) %>% 
+    select(ano, abril_mayo, septiembre_octubre) %>% 
+    pivot_longer(names_to = "mes", values_to = "nacidos_mes_pct", cols = 2:3)
+
+ggplot(abril_septiembre,
+       aes(x = ano, y = nacidos_mes_pct, color = mes)) + 
+    geom_segment(color = "grey10", x = 1975, xend = 2019, y = 16.666, yend = 16.666, size = .75) +
+    geom_line(size = 1.5) +
+    geom_smooth() +
+    ylim (15.8,18.1) +
+    theme_minimal() +
+    theme(plot.title = element_text(face = "bold", size = 18, color = "grey10"),
+          plot.subtitle = element_text(size = 14, color = "grey30"),
+          plot.caption = element_text(size = 11, face = "italic", color = "grey30", hjust=c(0, 1)),
+          axis.title = element_text(size = 14, color = "grey30"),
+          axis.text = element_text(size = 11, color = "grey40"),
+          strip.text = element_text(size = 12, face = "bold", color = "grey10"),
+          plot.margin = margin(10, 20, 10, 20),
+          plot.title.position = "plot",
+          plot.caption.position = "plot",
+          legend.position = "top",
+          legend.title = element_blank(),
+          legend.key.width =  unit(5, "lines"),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_line(size = .5),
+          panel.grid.minor.y = element_line(size = .5, linetype = "longdash"),
+          axis.ticks = element_blank()) +
+    labs(title= "", subtitle= "", caption= "", x = "", y = "")
+
+```
+
+---
+
+## Evolución nacimientos en enero y diciembre
+
+```{r nacimientos enero diciembre, echo = F, fig.height = 8, fig.width = 12}
+
+enero_diciembre <- tidy_data %>% 
+    filter(mes%in%c("ene", "dic"))
+
+ggplot(enero_diciembre,
+       aes(x = ano, y = nacidos_mes_pct, color = mes)) + 
+    geom_segment(color = "grey10", x = 1975, xend = 2019, y = 8.333, yend = 8.333, size = .75) +
+    geom_line(size = 1.5) +
+    geom_smooth() +
+    facet_wrap(~mes, ncol = 2) +
+    ylim (7.25,9.0) +
+    theme_minimal() +
+    theme(plot.title = element_text(face = "bold", size = 18, color = "grey10"),
+          plot.subtitle = element_text(size = 14, color = "grey30"),
+          plot.caption = element_text(size = 11, face = "italic", color = "grey30", hjust=c(0, 1)),
+          axis.title = element_text(size = 14, color = "grey30"),
+          axis.text = element_text(size = 11, color = "grey40"),
+          strip.text = element_text(size = 12, face = "bold", color = "grey10"),
+          plot.margin = margin(10, 20, 10, 20),
+          plot.title.position = "plot",
+          plot.caption.position = "plot",
+          legend.position = "top",
+          legend.title = element_blank(),
+          legend.key.width =  unit(5, "lines"),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          panel.grid.major.y = element_line(size = .5),
+          panel.grid.minor.y = element_line(size = .5, linetype = "longdash"),
+          axis.ticks = element_blank()) +
+    labs(title= "", subtitle= "", caption= "", x = "", y = "")
+
+```
