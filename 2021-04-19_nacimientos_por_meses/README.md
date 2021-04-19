@@ -1,6 +1,6 @@
 # Distribución anual de los nacimientos por meses (1975-2019)
 
-Código, datasets, análisis exploratorio de datos y gráficos para el artículo [*Los 'beberoños' de los millennials*]() publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
+Código, datasets, análisis exploratorio de datos y gráficos para el artículo [*Los 'beberoños' de los millennials*](https://filasycolumnas.substack.com/p/los-beberonos-de-los-millennials) publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
 
 ---
 
