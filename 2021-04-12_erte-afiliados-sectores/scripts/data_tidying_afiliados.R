@@ -12,7 +12,7 @@ afiliados_tidy <- afiliados_raw %>%
     # eliminar filas con NA
     filter(!is.na(`Régimen`)) %>%
     # reordenar y crear una columna con CNAE
-    pivot_longer(names_to = "cnae_nombre", values_to = "afiliados_medios", cols = 3:90) %>% 
+    pivot_longer(names_to = "cnae_nombre", values_to = "afiliados_medios", cols = 3:92) %>% 
     clean_names() %>% 
     # separar columna de CNAE en dos, código y nombre
     mutate(cnae_cod=str_sub(cnae_nombre, 1,2),
@@ -27,7 +27,8 @@ afiliados_tidy <- afiliados_raw %>%
     # crear columna de afiliados_medios_total con la suma de reg_general y autonomos
     mutate(afiliados_medios_total=afiliados_medios_reg_general+afiliados_medios_autonomos) %>% 
     # crear columna de fecha con formato YYYY-MM-DD
-    mutate(fecha=dmy(str_c("01 ", fecha)))
+    mutate(fecha=dmy(str_c("01 ", fecha))) %>% 
+    filter(cnae_cod!="No" & cnae_cod!="ME")
 
 write_csv(afiliados_tidy, "data/tidy/afiliados_medios_sectores_tidy.csv")
 
