@@ -1,6 +1,6 @@
 # Autoubicación ideológica por grupos de edad
 
-Código y gráficos para el artículo [*El colectivo NS/NC, en peligro de extinción*](https://filasycolumnas.substack.com/) publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
+Código y gráficos para el artículo [*El colectivo NS/NC, en peligro de extinción*](https://filasycolumnas.substack.com/p/el-colectivo-nsnc-en-peligro-de-extincion) publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
 
 ---
 
