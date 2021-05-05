@@ -1,0 +1,112 @@
+---
+title: "Autoubicación ideológica por edades - Análisis exploratorio de datos"
+author: "Jesús Escudero"
+date: "5/5/2021"
+output:
+    html_document:
+        theme: sandstone
+        toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r cargar librerías importar datos}
+
+## fijar directorio base y cargar librerías
+setwd("F:/GitHub/filas-y-columnas/2021-05-05_autoubicacion_ideologica_edades")
+
+library(tidyverse)
+library(ggplot2)
+library(viridis)
+
+## importar tidy data
+tidy_data <- read_csv("data/tidy/autoubicacion_edades_tidy.csv")
+
+```
+
+---
+
+# Resultados del análisis
+
+## Evolución de la autoubicación ideológica media
+
+```{r autoubicación media, fig.height = 8, fig.width = 12}
+
+autoubicacion_media <- tidy_data %>% 
+    filter(autoubicacion%in%c(1,2,3,4,5,6,7,8,9,10)) %>% 
+    group_by(fecha, estudio) %>% 
+    summarise(autoubicacion_media = round(mean(autoubicacion),2),
+              desviacion_tipica = round(sd(autoubicacion),2))
+
+ggplot(autoubicacion_media,
+       aes(x = fecha, y = autoubicacion_media, color = autoubicacion_media)) +
+    geom_line() +
+    geom_smooth(span = 0.15) +
+    scale_color_viridis(option = "magma", direction = -1) +
+    theme_minimal()
+
+```
+
+---
+
+## Evolución de la autoubicación ideológica media por grupos de edad
+
+```{r autoubicación media edades, fig.height = 8, fig.width = 12}
+
+autoubicacion_media_edad <- tidy_data %>% 
+    filter(autoubicacion%in%c(1,2,3,4,5,6,7,8,9,10)) %>% 
+    group_by(fecha, estudio, grupo_edad) %>% 
+    summarise(autoubicacion_media = round(mean(autoubicacion),2),
+              desviacion_tipica = round(sd(autoubicacion),2)) %>% 
+    filter(grupo_edad!="No contesta")
+
+ggplot(autoubicacion_media_edad,
+       aes(x = fecha, y = autoubicacion_media, group = grupo_edad, color = grupo_edad)) +
+    geom_smooth(size = 1.3, span = 0.15, se = FALSE) +
+    scale_color_viridis(discrete = TRUE, option = "magma", direction = -1) +
+    theme_minimal()
+
+```
+
+---
+
+## Distribución por grupos ideológicos
+
+```{r distribución ideología, fig.height = 8, fig.width = 12}
+
+distribucion_ubicacion <- tidy_data %>% 
+    filter(autoubicacion_grupo!="-99") %>% 
+    group_by(fecha, estudio, autoubicacion_grupo) %>% 
+    summarise(encuestados=n()) %>% 
+    mutate(encuestados_pct=encuestados/(sum(encuestados)))
+
+ggplot(distribucion_ubicacion,
+       aes(x = fecha, y = encuestados_pct, group = autoubicacion_grupo, color = autoubicacion_grupo)) +
+    geom_smooth(size = 1.3, span = 0.15, se = FALSE) +
+    scale_color_viridis(discrete = TRUE, option = "magma", direction = -1) +
+    theme_minimal()
+
+```
+
+---
+
+## Distribución por grupos ideológicos por grupos de edad
+
+```{r distribucion ideología edades, fig.height = 8, fig.width = 12}
+
+distribucion_ubicacion_edad <- tidy_data %>% 
+    filter(grupo_edad!="No contesta" & !is.na(autoubicacion_grupo)) %>% 
+    group_by(fecha, estudio, grupo_edad, autoubicacion_grupo) %>% 
+    summarise(encuestados=n()) %>% 
+    mutate(encuestados_pct=encuestados/(sum(encuestados)))
+
+ggplot(distribucion_ubicacion_edad,
+       aes(x = fecha, y = encuestados_pct, group = grupo_edad, color = grupo_edad)) +
+    geom_smooth(size = 1.3, span = 0.15, se = FALSE) +
+    scale_color_viridis(discrete = TRUE, option = "magma", direction = -1) +
+    facet_wrap(~autoubicacion_grupo) +
+    theme_minimal()
+
+```

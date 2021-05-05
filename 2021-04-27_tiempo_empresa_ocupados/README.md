@@ -13,4 +13,4 @@ La fuente original de los datos son los [microdatos trimestrales de la Encuesta 
 
 ## Gráficos finales
 
-El código para la elaboración y producción de los gráficos finales con la librería. ggplot2 está detallado [en este script](scripts/exploratory_data_analysis.R).
+El código para la elaboración y producción de los gráficos finales con la librería ggplot2 está detallado [en este script](scripts/exploratory_data_analysis.R).

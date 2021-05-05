@@ -1,0 +1,38 @@
+ESTUDIO	Número de estudio
+AÑOMES	Año y Mes del estudio
+AÑO	Año del estudio
+MES	Mes del estudio
+** VALORES:
+1:Enero
+2:Febrero
+3:Marzo
+4:Abril
+5:Mayo
+6:Junio
+7:Julio
+8:Agosto
+9:Septiembre
+10:Octubre
+11:Noviembre
+12:Diciembre
+
+NUMENTR	Nº único de entrevistado
+A.4	Edad de la persona entrevistada
+** VALORES:
+99:N.C.
+
+C.3.1	Escala de autoubicación ideológica (1-10)
+** VALORES:
+1:1 Izquierda
+2:2
+3:3
+4:4
+5:5
+6:6
+7:7
+8:8
+9:9
+10:10 Derecha
+98:N.S.
+99:N.C.
+
