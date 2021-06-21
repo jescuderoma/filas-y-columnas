@@ -13023,3 +13023,91 @@ fecha,cnae_cod,cnae_nombre,afiliados_medios_reg_general,afiliados_medios_autonom
 2021-04-01,97,Actividades de los hogares como empleado,40702.6,341.65,41044.25
 2021-04-01,98,Actividades de los hogares como productores de bienes,0,0,0
 2021-04-01,99,Actividades de organizaciones y organ. Extraterritoriales,3241.35,243.05,3484.4
+2021-05-01,01,"Agricultura, ganadería, caza y servicios",53446.86,259080.24,312527.1
+2021-05-01,02,Silvicultura y explotación forestal,22564.48,5517.62,28082.1
+2021-05-01,03,Pesca y acuicultura,1777.33,1158.14,2935.4700000000003
+2021-05-01,05,"Extracción de antracita, hulla y lignito",31.67,86.33,118
+2021-05-01,06,Extracción de crudo de petróleo y gas natural,152.95,7,159.95
+2021-05-01,07,Extracción de minerales metálicos,3210.52,43.1,3253.62
+2021-05-01,08,Otras industrias extractivas,14413.14,1447.05,15860.189999999999
+2021-05-01,09,Actividades de apoyo a las industrias extractivas,1107.52,124.76,1232.28
+2021-05-01,10,Industria de la alimentación,360384.24,29588.33,389972.57
+2021-05-01,11,Fabricación de bebidas,42611,3201.71,45812.71
+2021-05-01,12,Industria del tabaco,1682.29,34.81,1717.1
+2021-05-01,13,Industria textil,40895.62,6045.86,46941.48
+2021-05-01,14,Confección de prendas de vestir,30752.14,12366,43118.14
+2021-05-01,15,Industria del cuero y del calzado,31617.81,4610.24,36228.05
+2021-05-01,16,"Industria de la madera y del corcho, excepto muebles",48265.19,13433.62,61698.810000000005
+2021-05-01,17,Industria del papel,42137.38,1360.29,43497.67
+2021-05-01,18,Artes gráficas y reproducción de soportes grabados,53820.1,16361.52,70181.62
+2021-05-01,19,Coquerías y refino de petróleo,8078.24,24,8102.24
+2021-05-01,20,Industria química,98800.95,3055.48,101856.43
+2021-05-01,21,Fabricación de productos farmacéuticos,54958.57,160.81,55119.38
+2021-05-01,22,Fabricación de productos de caucho y plásticos,89537.14,4797.62,94334.76
+2021-05-01,23,Fabricación de otros productos minerales,91685,8598.05,100283.05
+2021-05-01,24,"Metalurgia; fabricación de productos de hierro, acero",70268.67,6120.71,76389.38
+2021-05-01,25,"Fabricación de productos metálicos, excepto maquina.",223884.62,36640.1,260524.72
+2021-05-01,26,"Fabricación de productos informáticos, electró. ópticos",28342.05,2255.95,30598
+2021-05-01,27,Fabricación de material y equipo eléctrico,44960.43,2753.43,47713.86
+2021-05-01,28,Fabricación de maquinaria y equipo n.c.o.p.,113546.05,12058.76,125604.81
+2021-05-01,29,"Fabricación de vehículos de motor, remolques",153064.05,2570.38,155634.43
+2021-05-01,30,Fabricación de otro material de transporte,51892.38,1420.48,53312.86
+2021-05-01,31,Fabricación de muebles,52578.9,13038.05,65616.95
+2021-05-01,32,Otras industrias manufactureras,29407.76,8772.57,38180.33
+2021-05-01,33,Reparación e instalación de maquinaria y equipo,79888.48,21121.67,101010.15
+2021-05-01,35,"Suministro de energía eléctrica, gas, vapor  y aire c.",34506.52,1716.48,36223
+2021-05-01,36,"Captación, depuración y distribución de agua",44125.14,377.86,44503
+2021-05-01,37,Recogida y tratamiento de aguas residuales,5478.14,320.57,5798.71
+2021-05-01,38,"Recogida, tratamiento y eliminación de residuos",94988.86,1548.1,96536.96
+2021-05-01,39,Actividades de descontaminación y otros,2020.81,194.67,2215.48
+2021-05-01,41,Construcción de edificios,355228.62,126478.29,481706.91
+2021-05-01,42,Ingeniería civil,47277.38,7076.24,54353.619999999995
+2021-05-01,43,Actividades de construcción especializada,497189.38,263910.9,761100.28
+2021-05-01,45,Venta y reparación de vehículos de motor,241272.05,89723.95,330996
+2021-05-01,46,"Comercio al por mayor e intermediarios, excepto v. motor",801845.29,177911.24,979756.53
+2021-05-01,47,"Comercio al por menor, excepto de vehículos motor",1341207.43,505654.38,1846861.81
+2021-05-01,49,Transporte terrestre y por tubería,413070.9,187989.71,601060.61
+2021-05-01,50,Transporte marítimo y por vías navegable,796.05,363.33,1159.3799999999999
+2021-05-01,51,Transporte aéreo,33822.9,332.1,34155
+2021-05-01,52,Almacenamiento y actividades anexas al transporte,195813.48,8407.48,204220.96000000002
+2021-05-01,53,Actividades postales y de correos,75398.95,17725.76,93124.70999999999
+2021-05-01,55,Servicios de alojamiento,219243.76,20512,239755.76
+2021-05-01,56,Servicios de comidas y bebidas,869235.52,299728.19,1168963.71
+2021-05-01,58,Edición,40563.62,8012.38,48576
+2021-05-01,59,"Actividades cinematográficas, de vídeo y prog. telev.",37530.86,11321.86,48852.72
+2021-05-01,60,Actividades de programación y emisión de radio y telev.,23930.1,1023.71,24953.809999999998
+2021-05-01,61,Telecomunicaciones,72260.19,5639.1,77899.29000000001
+2021-05-01,62,"Programación, consultoría y otras activ. ,  Informáticas",329747.24,36513.71,366260.95
+2021-05-01,63,Servicios de información,27841.19,7688.81,35530
+2021-05-01,64,"Servicios financieros, excepto seguros y fondos pens.",198276.71,5352.67,203629.38
+2021-05-01,65,"Seguros, reaseguros y fondos de pensiones",56832.14,3230.05,60062.19
+2021-05-01,66,Actividades auxiliares a los servicios financieros y segur.,61818.29,51764.1,113582.39
+2021-05-01,68,Actividades inmobiliarias,95887.52,50186.33,146073.85
+2021-05-01,69,Actividades jurídicas y de contabilidad,226906.33,85113,312019.32999999996
+2021-05-01,70,Actividades de las sedes centrales; activ. Consul. Gest. Empr.,97605.38,30236.48,127841.86
+2021-05-01,71,Servicios técnicos de arquitectura e ingeniería,199968.48,63180.9,263149.38
+2021-05-01,72,Investigación y desarrollo,84172.38,13835.81,98008.19
+2021-05-01,73,Publicidad y estudios de mercado,80662,34327.38,114989.38
+2021-05-01,74,"Otras actividades profesionales, científicas y técnicas",78749.24,64009.9,142759.14
+2021-05-01,75,Actividades veterinarias,17443.29,10779.71,28223
+2021-05-01,77,Actividades de alquiler,62671.43,21511.62,84183.05
+2021-05-01,78,Actividades relacionadas con el empleo,200890.48,2126.81,203017.29
+2021-05-01,79,"Actividades de agencias de viajes, operadores turis.",37304.48,16522.62,53827.100000000006
+2021-05-01,80,Actividades de seguridad e investigación,133725.14,2295.14,136020.28000000003
+2021-05-01,81,Servicios a edificios y actividades de jardinería,578049.52,51381.62,629431.14
+2021-05-01,82,Actividades administrativas de oficina y activ. Aux. empresas,293984.29,39287.48,333271.76999999996
+2021-05-01,84,Administración Pòblica y defensa; Seguridad Soc. oblig.,1170153.24,1176.57,1171329.81
+2021-05-01,85,Educación,1032898.14,95262.62,1128160.76
+2021-05-01,86,Actividades sanitarias,1086303,115579.57,1201882.57
+2021-05-01,87,Asistencia en establecimientos residenciales,277767.48,2330.24,280097.72
+2021-05-01,88,Actividades de servicios sociales sin alojamiento,326992.05,4993.24,331985.29
+2021-05-01,90,"Actividades de creación, artísticas y espectáculos",25172.52,33579.1,58751.619999999995
+2021-05-01,91,"Actividades de bibliotecas, archivos, museos y o. act. Cult.",14656.9,1471.9,16128.8
+2021-05-01,92,Actividades de juegos de azar y apuestas,28574.38,6151.81,34726.19
+2021-05-01,93,"Actividades deportivas, recreativas y de entretenimiento",167056.24,31374.43,198430.66999999998
+2021-05-01,94,Actividades asociativas,124839.76,12437.57,137277.33
+2021-05-01,95,"Reparación de ordenadores, efectos personales y uso dom.",25057.57,36986.48,62044.05
+2021-05-01,96,Otros servicios personales,155960.67,162841.1,318801.77
+2021-05-01,97,Actividades de los hogares como empleado,40768.57,339.76,41108.33
+2021-05-01,98,Actividades de los hogares como productores de bienes,0,0,0
+2021-05-01,99,Actividades de organizaciones y organ. Extraterritoriales,3253.05,246.86,3499.9100000000003

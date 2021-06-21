@@ -1143,3 +1143,91 @@ fecha,cnae_cod,cnae_nombre,ccc_ultimo_dia,ccc_media_mes,trabajadores_erte_ultimo
 2021-04-01,97,Actividades de los hogares como empleadores de personal doméstico,37,37.16666666666667,104,106.3,53,51,NA,NA
 2021-04-01,98,Actividades de los hogares como productores de bienes y servicios para uso propio,0,0,0,0,0,0,NA,NA
 2021-04-01,99,Actividades de organizaciones y organismos extraterritoriales,4,4,27,27,9,18,NA,NA
+2021-05-01,01,"Agricultura, ganadería, caza y servicios relacionados con las mismas",186,190.35483870967744,542,575.6451612903226,334,208,NA,NA
+2021-05-01,02,Silvicultura y explotación forestal,10,10.258064516129032,16,16.967741935483872,12,4,NA,NA
+2021-05-01,03,Pesca y acuicultura,35,35.483870967741936,105,110.90322580645162,76,29,NA,NA
+2021-05-01,05,"Extracción de antracita, hulla y lignito",1,1,2,2,1,1,NA,NA
+2021-05-01,06,Extracción de crudo de petróleo y gas natural,0,0,0,0,0,0,NA,NA
+2021-05-01,07,Extracción de minerales metálicos,1,1,10,10.096774193548388,8,2,NA,NA
+2021-05-01,08,Otras industrias extractivas,18,18.32258064516129,52,52.67741935483871,44,8,NA,NA
+2021-05-01,09,Actividades de apoyo a las industrias extractivas,0,0,0,0,0,0,NA,NA
+2021-05-01,10,Industria de la alimentación,1599,1648.5806451612902,6377,6606.548387096775,3518,2859,NA,NA
+2021-05-01,11,Fabricación de bebidas,573,583.3870967741935,1831,1906.516129032258,1286,545,NA,NA
+2021-05-01,12,Industria del tabaco,4,4,55,55.29032258064516,19,36,NA,NA
+2021-05-01,13,Industria textil,337,349.19354838709677,2012,2119.8709677419356,987,1025,NA,NA
+2021-05-01,14,Confección de prendas de vestir,764,789.2258064516129,3135,3297.3870967741937,669,2466,NA,NA
+2021-05-01,15,Industria del cuero y del calzado,236,243.22580645161293,1113,1216.483870967742,584,529,NA,NA
+2021-05-01,16,"Industria de la madera y del corcho, excepto muebles; cestería y espartería",177,180.03225806451613,517,523.1935483870967,387,130,NA,NA
+2021-05-01,17,Industria del papel,99,99.06451612903226,391,400.4193548387097,244,147,NA,NA
+2021-05-01,18,Artes gráficas y reproducción de soportes grabados,1695,1714.1290322580646,5619,5758.096774193549,3632,1987,NA,NA
+2021-05-01,19,Coquerías y refino de petróleo,2,1.8709677419354838,28,24.967741935483872,22,6,NA,NA
+2021-05-01,20,Industria química,220,223.1290322580645,1046,1071.774193548387,701,345,NA,NA
+2021-05-01,21,Fabricación de productos farmacéuticos,20,20,98,98,41,57,NA,NA
+2021-05-01,22,Fabricación de productos de caucho y plásticos,181,185.6451612903226,1203,1475.5483870967741,816,387,NA,NA
+2021-05-01,23,Fabricación de otros productos minerales no metálicos,178,181.58064516129033,819,840.4516129032259,545,274,NA,NA
+2021-05-01,24,"Metalurgia; fabricación de productos de hierro, acero y ferroaleaciones",69,75.7741935483871,326,383,270,56,NA,NA
+2021-05-01,25,"Fabricación de productos metálicos, excepto maquinaria y equipo",722,735.8709677419355,2877,2961.935483870968,2260,617,NA,NA
+2021-05-01,26,"Fabricación de productos informáticos, electrónicos y ópticos",77,76.74193548387096,365,366.7741935483871,245,120,NA,NA
+2021-05-01,27,Fabricación de material y equipo eléctrico,109,111.2258064516129,585,611.5483870967743,408,177,NA,NA
+2021-05-01,28,Fabricación de maquinaria y equipo n.c.o.p.,353,358.41935483870964,1624,1665.2903225806451,1256,368,NA,NA
+2021-05-01,29,"Fabricación de vehículos de motor, remolques y semirremolques",117,121.45161290322581,3967,4339.645161290323,3365,602,NA,NA
+2021-05-01,30,Fabricación de otro material de transporte,65,68.12903225806451,684,717.0967741935484,539,145,NA,NA
+2021-05-01,31,Fabricación de muebles,268,276.6774193548387,945,996.8387096774194,714,231,NA,NA
+2021-05-01,32,Otras industrias manufactureras,445,452.93548387096774,1543,1581.6129032258063,810,733,NA,NA
+2021-05-01,33,Reparación e instalación de maquinaria y equipo,464,474.2903225806451,1582,1668.1612903225805,1241,341,NA,NA
+2021-05-01,35,"Suministro de energía eléctrica, gas, vapor y aire acondicionado",48,50.096774193548384,124,129.16129032258064,98,26,NA,NA
+2021-05-01,36,"Captación, depuración y distribución de agua",16,16.58064516129032,45,46.74193548387097,34,11,NA,NA
+2021-05-01,37,Recogida y tratamiento de aguas residuales,6,6.290322580645162,16,15.806451612903226,14,2,NA,NA
+2021-05-01,38,"Recogida, tratamiento y eliminación de residuos; valorización",67,66.93548387096774,173,179.5483870967742,121,52,NA,NA
+2021-05-01,39,Actividades de descontaminación y otros servicios de gestión de residuos,7,7.451612903225806,11,11.451612903225806,8,3,NA,NA
+2021-05-01,41,Construcción de edificios,991,1008.9032258064517,2198,2258.935483870968,1165,1033,NA,NA
+2021-05-01,42,Ingeniería civil,61,61.64516129032258,146,145.5483870967742,117,29,NA,NA
+2021-05-01,43,Actividades de construcción especializada,1501,1549.2903225806454,3506,3700.7419354838707,2605,901,NA,NA
+2021-05-01,45,Venta y reparación de vehículos de motor y motocicletas,3432,3547.1612903225805,9801,10263.612903225807,7605,2196,NA,NA
+2021-05-01,46,"Comercio al por mayor e intermediarios del comercio, excepto de vehículos de motor y motocicletas",8423,8613.516129032258,28992,30201.290322580644,18413,10579,NA,NA
+2021-05-01,47,"Comercio al por menor, excepto de vehículos de motor y motocicletas",17053,17591.451612903227,42656,44478.032258064515,12994,29662,NA,NA
+2021-05-01,49,Transporte terrestre y por tubería,5511,5625.580645161291,13445,13771.580645161292,11207,2238,NA,NA
+2021-05-01,50,Transporte marítimo y por vías navegables interiores,278,289.61290322580646,953,995.7096774193549,567,386,NA,NA
+2021-05-01,51,Transporte aéreo,143,145.74193548387098,13350,13374.129032258064,7060,6290,NA,NA
+2021-05-01,52,Almacenamiento y actividades anexas al transporte,984,997.3548387096776,9378,9585.580645161292,6083,3295,NA,NA
+2021-05-01,53,Actividades postales y de correos,117,118.25806451612904,361,367.8709677419355,259,102,NA,NA
+2021-05-01,55,Servicios de alojamiento,9238,9537.387096774193,90689,96224.58064516129,40546,50143,NA,NA
+2021-05-01,56,Servicios de comidas y bebidas,49179,52374.45161290323,153616,167161.93548387097,72970,80646,NA,NA
+2021-05-01,58,Edición,303,307.9032258064516,2040,2067.9032258064517,1007,1033,NA,NA
+2021-05-01,59,"Actividades cinematográficas, de vídeo y de programas de TV grabación de sonido y edición musical",459,467.0645161290322,3041,3219.677419354839,1337,1704,NA,NA
+2021-05-01,60,Actividades de programación y emisión de radio y televisión,93,94.45161290322581,344,352.5483870967742,213,131,NA,NA
+2021-05-01,61,Telecomunicaciones,122,127.25806451612902,341,353.58064516129025,176,165,NA,NA
+2021-05-01,62,"Programación, consultoría y otras actividades relacionadas con la informática",474,484.38709677419354,2085,2197.1290322580644,1260,825,NA,NA
+2021-05-01,63,Servicios de información,169,170.06451612903226,727,754.0967741935484,324,403,NA,NA
+2021-05-01,64,"Servicios financieros, excepto seguros y fondos de pensiones",112,114.29032258064515,467,482.1612903225806,195,272,NA,NA
+2021-05-01,65,"Seguros, reaseguros y fondos de pensiones, excepto Seguridad Social obligatoria",17,17.064516129032256,34,36.064516129032256,15,19,NA,NA
+2021-05-01,66,Actividades auxiliares a los servicios financieros y a los seguros,187,193.1290322580645,711,722.1612903225807,257,454,NA,NA
+2021-05-01,68,Actividades inmobiliarias,1750,1799.7096774193549,3524,3657.1290322580644,1332,2192,NA,NA
+2021-05-01,69,Actividades jurídicas y de contabilidad,741,756.8064516129032,2537,2608.1290322580644,816,1721,NA,NA
+2021-05-01,70,Actividades de las sedes centrales; actividades de consultoría de gestión empresarial,439,446.64516129032256,2013,2094.8064516129034,810,1203,NA,NA
+2021-05-01,71,Servicios técnicos de arquitectura e ingeniería; ensayos y análisis técnicos,562,577.8387096774194,1673,1788.967741935484,976,697,NA,NA
+2021-05-01,72,Investigación y desarrollo,56,57.19354838709678,170,186.67741935483872,74,96,NA,NA
+2021-05-01,73,Publicidad y estudios de mercado,993,1019.9677419354839,3372,3460.387096774193,1508,1864,NA,NA
+2021-05-01,74,"Otras actividades profesionales, científicas y técnicas",641,657.3870967741935,2534,2626.322580645161,1103,1431,NA,NA
+2021-05-01,75,Actividades veterinarias,27,27.612903225806452,32,32.54838709677419,6,26,NA,NA
+2021-05-01,77,Actividades de alquiler,1551,1586.0645161290322,6437,6719.064516129032,3861,2576,NA,NA
+2021-05-01,78,Actividades relacionadas con el empleo,236,248.06451612903226,893,988.6129032258063,297,596,NA,NA
+2021-05-01,79,"Actividades de agencias de viajes, operadores turísticos, serv. de reservas y activ rel con los mismos",3554,3618.612903225807,21507,22272.129032258068,5477,16030,NA,NA
+2021-05-01,80,Actividades de seguridad e investigación,100,101.70967741935483,798,851.0967741935484,488,310,NA,NA
+2021-05-01,81,Servicios a edificios y actividades de jardinería,1568,1625.8709677419356,7247,7639.903225806452,2257,4990,NA,NA
+2021-05-01,82,Actividades administrativas de oficina y otras actividades auxiliares a las empresas,1591,1636.8387096774195,8309,8616.806451612902,3869,4440,NA,NA
+2021-05-01,84,Administración Pública y defensa; Seguridad Social obligatoria,21,21,274,274.22580645161287,115,159,NA,NA
+2021-05-01,85,Educación,2804,2865.4193548387098,7138,7324.483870967742,2187,4951,NA,NA
+2021-05-01,86,Actividades sanitarias,1681,1723.3870967741934,2904,2988.935483870968,559,2345,NA,NA
+2021-05-01,87,Asistencia en establecimientos residenciales,128,133.29032258064515,550,580.9354838709678,139,411,NA,NA
+2021-05-01,88,Actividades de servicios sociales sin alojamiento,482,495.4193548387097,1630,1677.8064516129032,524,1106,NA,NA
+2021-05-01,90,"Actividades de creación, artísticas y espectáculos",1000,1010.0645161290323,3392,3453.7741935483873,1864,1528,NA,NA
+2021-05-01,91,"Actividades de bibliotecas, archivos, museos y otras actividades culturales",249,254.32258064516128,1540,1576.3870967741937,609,931,NA,NA
+2021-05-01,92,Actividades de juegos de azar y apuestas,1253,1295.9354838709678,7483,7957.741935483871,4139,3344,NA,NA
+2021-05-01,93,"Actividades deportivas, recreativas y de entretenimiento",4791,4943.451612903225,19914,20969.354838709678,10460,9454,NA,NA
+2021-05-01,94,Actividades asociativas,937,961.5483870967741,2732,2819.258064516129,1002,1730,NA,NA
+2021-05-01,95,"Reparación de ordenadores, efectos personales y artículos de uso doméstico",404,417.45161290322574,831,869.4193548387096,453,378,NA,NA
+2021-05-01,96,Otros servicios personales,5930,6124.548387096775,13878,14786.90322580645,3138,10740,NA,NA
+2021-05-01,97,Actividades de los hogares como empleadores de personal doméstico,34,34.58064516129032,88,92.32258064516128,39,49,NA,NA
+2021-05-01,98,Actividades de los hogares como productores de bienes y servicios para uso propio,0,0,0,0,0,0,NA,NA
+2021-05-01,99,Actividades de organizaciones y organismos extraterritoriales,3,3,23,23,9,14,NA,NA

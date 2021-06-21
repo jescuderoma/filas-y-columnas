@@ -11,6 +11,19 @@ options(scipen = "999")
 
 ## importar datos de la hoja ERTE por Sectores de actividad desde octubre de 2020
 
+erte_2021_05 <- read_xlsx("data/raw/seguridad_social/2021-05_afiliacion_seguridad_social.xlsx",
+                          sheet = "ERTE por Sectores de Actividad", skip = 5, col_names = FALSE) %>% 
+    # elegir las columnas del bloque Totales - Acumulados durante el mes
+    select(1:2, 29:34) %>% 
+    clean_names() %>% 
+    rename(cnae_cod = x1, cnae_nombre = x2, ccc_ultimo_dia = x29, ccc_media_mes = x30,
+           trabajadores_erte_ultimo_dia = x31, trabajadores_erte_media_mes = x32,
+           hombres_erte_ultimo_dia = x33, mujeres_erte_ultimo_dia = x34) %>% 
+    # eliminar fila en blanco y fila final con el sumatorio total
+    filter(!is.na(cnae_nombre)) %>% 
+    # crear columna de fecha en formato YYYY-MM-DD
+    mutate(fecha=as.Date("2021-05-01"))
+
 erte_2021_04 <- read_xlsx("data/raw/seguridad_social/2021-04_afiliacion_seguridad_social.xlsx",
                           sheet = "ERTE por Sectores de Actividad", skip = 5, col_names = FALSE) %>% 
     # elegir las columnas del bloque Totales - Acumulados durante el mes
@@ -111,7 +124,7 @@ erte_2020_10 <- read_xlsx("data/raw/seguridad_social/2020-10_afiliacion_segurida
 ## unir data frames desde octubre de 2020
 erte_desde_octubre2020 <- bind_rows(erte_2020_10, erte_2020_11, erte_2020_12,
                                     erte_2021_01, erte_2021_02, erte_2021_03,
-                                    erte_2021_04)
+                                    erte_2021_04, erte_2021_05)
 
 
 ## importar datos de la hoja ERTE por Sectores de actividad entre junio y septiembre de 2020
