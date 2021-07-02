@@ -50,10 +50,10 @@ erte_afiliados_sectores1$nombre_corto <- factor(erte_afiliados_sectores1$nombre_
 
 ggplot(erte_afiliados_sectores1,
        aes(x = fecha, y = erte_afiliados_general_pct)) +
-    annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-04-01"), xmax = as.Date("2020-06-10"), ymin = 0, ymax = 85, alpha = .4) +
+    annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-04-01"), xmax = as.Date("2020-07-10"), ymin = 0, ymax = 85, alpha = .4) +
     annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-09-15"), xmax = as.Date("2020-11-15"), ymin = 0, ymax = 85, alpha = .4) +
     annotate("rect", fill = "#FCFBBD", xmin = as.Date("2021-01-10"), xmax = as.Date("2021-02-25"), ymin = 0, ymax = 85, alpha = .4) +
-    annotate("segment", color = "grey10", x = as.Date("2020-04-01"), xend = as.Date("2021-05-01"), y = 0, yend = 0) +
+    annotate("segment", color = "grey10", x = as.Date("2020-04-01"), xend = as.Date("2021-06-01"), y = 0, yend = 0) +
     geom_step(size = 1.5, color = "#cf735f") +
     ylim (0,85) +
     facet_wrap(~nombre_corto, ncol = 3) +
@@ -101,10 +101,10 @@ erte_afiliados_sectores2$nombre_corto <- factor(erte_afiliados_sectores2$nombre_
 
 ggplot(erte_afiliados_sectores2,
        aes(x = fecha, y = erte_afiliados_general_pct)) +
-    annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-04-01"), xmax = as.Date("2020-06-10"), ymin = 0, ymax = 45, alpha = .4) +
+    annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-04-01"), xmax = as.Date("2020-07-10"), ymin = 0, ymax = 45, alpha = .4) +
     annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-09-15"), xmax = as.Date("2020-11-15"), ymin = 0, ymax = 45, alpha = .4) +
     annotate("rect", fill = "#FCFBBD", xmin = as.Date("2021-01-10"), xmax = as.Date("2021-02-25"), ymin = 0, ymax = 45, alpha = .4) +
-    annotate("segment", color = "grey10", x = as.Date("2020-04-01"), xend = as.Date("2021-05-01"), y = 0, yend = 0) +
+    annotate("segment", color = "grey10", x = as.Date("2020-04-01"), xend = as.Date("2021-06-01"), y = 0, yend = 0) +
     geom_step(size = 1.5, color = "#772278") +
     ylim (0,45) +
     facet_wrap(~nombre_corto, ncol = 3) +
@@ -155,10 +155,10 @@ erte_afiliados_sectores3$nombre_corto <- factor(erte_afiliados_sectores3$nombre_
 
 ggplot(erte_afiliados_sectores3,
        aes(x = fecha, y = erte_afiliados_general_pct)) +
-    annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-04-01"), xmax = as.Date("2020-06-10"), ymin = 0, ymax = 80, alpha = .4) +
+    annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-04-01"), xmax = as.Date("2020-07-10"), ymin = 0, ymax = 80, alpha = .4) +
     annotate("rect", fill = "#FCFBBD", xmin = as.Date("2020-09-15"), xmax = as.Date("2020-11-15"), ymin = 0, ymax = 80, alpha = .4) +
     annotate("rect", fill = "#FCFBBD", xmin = as.Date("2021-01-10"), xmax = as.Date("2021-02-25"), ymin = 0, ymax = 80, alpha = .4) +
-    annotate("segment", color = "grey10", x = as.Date("2020-04-01"), xend = as.Date("2021-05-01"), y = 0, yend = 0) +
+    annotate("segment", color = "grey10", x = as.Date("2020-04-01"), xend = as.Date("2021-06-01"), y = 0, yend = 0) +
     geom_step(size = 1.5, color = "#2d205d") +
     ylim (0,80) +
     facet_wrap(~nombre_corto, ncol = 3) +
