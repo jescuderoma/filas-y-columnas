@@ -7,6 +7,7 @@ Código y gráficos para el artículo [**]() publicado en mi newsletter personal
 ## Raw data y fuentes
 
 Los [datos en bruto](https://github.com/jescuderoma/filas-y-columnas/blob/main/2021-04-12_erte-afiliados-sectores/data/raw/afiliados_medios.csv) proceden de la [Estadística mensual de afiliados medios por régimen y actividad económica](https://w6.seg-social.es/PXWeb/pxweb/es/Afiliados%20en%20alta%20laboral/Afiliados%20en%20alta%20laboral__Afiliados%20Medios/12m_02%20Afi.%20Med.%20(R.%20General%20y%20RETA)%20CNAE-09%20desde%202009%20por%20R%C3%A9gimen%20y%20Actividad%20Econ%C3%B3mica.px/) de la Seguridad Social.
+
 ---
 
 ## Tidy data
