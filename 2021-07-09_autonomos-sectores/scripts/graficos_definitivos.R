@@ -65,7 +65,7 @@ ggplot(media_mediana_general,
          caption=c("Fuente: Afiliados medios a la Seguridad Social", "Elaborado por Jesús Escudero (@jescuderoma) | https://filasycolumnas.substack.com/"),
          x = "", y = "")
 
-ggsave("graficos/afiliados_medios_general.png", width = 30, height = 18, units = "cm")
+ggsave("graficos/afiliados_medios_general.jpg", width = 30, height = 18, units = "cm")
 
 
 # gráfico diferencia % autónomos junio 2009-junio 2021 por actividades
@@ -114,8 +114,7 @@ ggplot(autonomos_junio_2009_2021) +
          caption=c("Fuente: Afiliados medios a la Seguridad Social", "Elaborado por Jesús Escudero (@jescuderoma) | https://filasycolumnas.substack.com/"),
          x = "", y = "")
 
-ggsave("graficos/afiliados_actividades_diferencia.png", width = 30, height = 54, units = "cm")
-
+ggsave("graficos/afiliados_actividades_diferencia.jpg", width = 30, height = 54, units = "cm")
 
 
 # gráfico actividades con mayor aumento del % de autónomos
@@ -169,7 +168,7 @@ ggplot(actividades_subida,
          caption=c("Fuente: Afiliados medios a la Seguridad Social", "Elaborado por Jesús Escudero (@jescuderoma) | https://filasycolumnas.substack.com/"),
          x = "", y = "")
 
-ggsave("graficos/actividades_subida.png", width = 30, height = 24, units = "cm")
+ggsave("graficos/actividades_subida.jpg", width = 30, height = 24, units = "cm")
 
 
 # gráfico actividades con mayor descenso del % de autónomos
@@ -219,5 +218,5 @@ ggplot(actividades_bajada,
          caption=c("Fuente: Afiliados medios a la Seguridad Social", "Elaborado por Jesús Escudero (@jescuderoma) | https://filasycolumnas.substack.com/"),
          x = "", y = "")
 
-ggsave("graficos/actividades_bajada.png", width = 30, height = 18, units = "cm")
+ggsave("graficos/actividades_bajada.jpg", width = 30, height = 18, units = "cm")
 
