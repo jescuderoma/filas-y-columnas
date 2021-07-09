@@ -1,6 +1,6 @@
 # Trabajadores autónomos por actividades económicas
 
-Código y gráficos para el artículo [**]() publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
+Código y gráficos para el artículo [*La paradoja de la cifra de autónomos*](https://filasycolumnas.substack.com/p/la-paradoja-de-la-cifra-de-autonomos) publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
 
 ---
 
