@@ -1,4 +1,4 @@
-# Trabajadores autónomos por actividades económicos
+# Trabajadores autónomos por actividades económicas
 
 Código y gráficos para el artículo [**]() publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
 
