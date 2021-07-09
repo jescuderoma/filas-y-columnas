@@ -1,0 +1,123 @@
+---
+title: "Autónomos por actividades - Análisis exploratorio de datos"
+author: "Jesús Escudero"
+date: "9/7/2021"
+output:
+    html_document:
+        theme: sandstone
+        toc: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r cargar librerías}
+
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(viridis)
+library(scales)
+library(forcats)
+library(janitor)
+```
+
+```{r importar datos}
+
+# importar datos por actividades y obtener columna de porcentaje de autónomos sobre el total
+datos_sectores <- read_csv("https://raw.githubusercontent.com/jescuderoma/filas-y-columnas/main/2021-04-12_erte-afiliados-sectores/data/tidy/afiliados_medios_sectores_tidy.csv") %>% 
+    mutate(autonomos_pct=afiliados_medios_autonomos/afiliados_medios_total)
+
+
+# datos generales
+datos_generales <- datos_sectores %>% 
+    group_by(fecha) %>% 
+    summarise(afiliados_reg_general=sum(afiliados_medios_reg_general),
+              afiliados_autonomos=sum(afiliados_medios_autonomos),
+              afiliados_totales=sum(afiliados_medios_total)) %>% 
+    mutate(autonomos_pct=afiliados_autonomos/afiliados_totales)
+
+### obtener medianas de porcentaje de autonómos y unirlo al data frame de datos generales
+datos_medianas_generales <- datos_sectores %>% 
+    group_by(fecha) %>% 
+    summarise(mediana_afiliados=median(autonomos_pct, na.rm = TRUE))
+
+datos_generales <- left_join(datos_generales, datos_medianas_generales,
+                             by = "fecha")
+
+rm(datos_medianas_generales)
+```
+
+# Resultados del análisis
+
+## Evolución del porcentaje de autónomos sobre el total de afiliados (Régimen General+RETA) y el porcentaje mediano por sectores
+
+```{r media mediana general, fig.height = 8, fig.width = 12}
+media_mediana_general <- datos_generales %>% 
+    select(fecha, media=autonomos_pct, mediana=mediana_afiliados) %>% 
+    pivot_longer(cols = 2:3, names_to = "indicador", values_to = "porcentaje")
+
+ggplot(media_mediana_general,
+       aes(x = fecha, y = porcentaje, group = indicador, color = indicador)) +
+    geom_line(size = 1.3) +
+    scale_y_continuous(breaks = seq(0.08, 0.24, 0.04), limits = c(0.08,0.24), labels = label_percent(decimal.mark = ",", accuracy = 1L)) +
+    theme_minimal() +
+    theme(legend.position = "top",
+          legend.title = element_blank()) +
+    labs(x = "", y = "")
+
+```
+
+---
+
+## Actividades de más de 10.000 afiliados con más % autónomos en junio 2021
+
+```{r actividades más autónomos último dato, fig.height = 20, fig.width = 12}
+autonomos_junio_2021 <- datos_sectores %>% 
+    filter(fecha=="2021-06-01" & afiliados_medios_total > 10000) %>% 
+    arrange(-autonomos_pct)
+
+ggplot(autonomos_junio_2021,
+       aes(x = autonomos_pct, y = fct_reorder(cnae_nombre, autonomos_pct))) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = scales::percent(autonomos_pct, decimal.mark = ",", accuracy = 0.1L), hjust=-.1)) +
+    theme_minimal() +
+    theme(panel.grid.major.y = element_blank(),
+          panel.grid.minor.y = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank()) +
+    labs(x = "", y = "")
+
+```
+
+---
+
+## Diferencia en % autónomos entre <span style="color: #FEA772;">junio 2009</span> y <span style="color: #421475;">junio 2021</span>
+
+```{r variacion autonomos 2009-2021, fig.height = 20, fig.width = 12}
+autonomos_junio_2009_2021 <- datos_sectores %>% 
+    filter(fecha=="2021-06-01" | fecha=="2009-06-01", afiliados_medios_total > 10000) %>% 
+    select(fecha, cnae_cod, cnae_nombre, autonomos_pct) %>% 
+    pivot_wider(names_from = "fecha", values_from = "autonomos_pct") %>% 
+    clean_names() %>% 
+    rename(junio2009 = x2009_06_01, junio2021 = x2021_06_01) %>% 
+    mutate(nombre_completo = paste0(cnae_cod, " - ", cnae_nombre),
+           diferencia=junio2021-junio2009,
+           nombre_completo = fct_reorder(nombre_completo, junio2021))
+
+ggplot(autonomos_junio_2009_2021) +
+  geom_point(aes(x=junio2009, y=nombre_completo), color="#FEA772", size = 2) +
+  geom_point(aes(x=junio2021, y=nombre_completo), color="#421475", size = 2) +
+  geom_segment(aes(x = junio2009, y = nombre_completo, xend = junio2021, yend = nombre_completo), color = "grey10", arrow = arrow(length=unit(0.20,"cm"), ends="last", type = "closed")) +
+  labs(x="", y="") +
+  theme_minimal() +
+  geom_text(aes(x=junio2009, y=nombre_completo, label = scales::percent(junio2009, decimal.mark = ",", accuracy = 0.1L)), hjust=ifelse(autonomos_junio_2009_2021$junio2009<autonomos_junio_2009_2021$junio2021, 1.2, -.2)) +
+  geom_text(aes(x=junio2021, y=nombre_completo, label = scales::percent(junio2021, decimal.mark = ",", accuracy = 0.1L)), hjust=ifelse(autonomos_junio_2009_2021$junio2009<autonomos_junio_2009_2021$junio2021, -.2, 1.2)) +
+  theme(panel.border = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(), 
+        axis.line = element_blank(),
+        axis.text.x = element_blank())
+
+```
