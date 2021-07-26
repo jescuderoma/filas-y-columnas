@@ -1,6 +1,6 @@
 # Edad mediana del primer trabajo por generaciones
 
-Código y gráficos para el artículo [*El primer escalón hacia la vida adulta cada vez llega más tarde*]() publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
+Código y gráficos para el artículo [*El primer escalón hacia la vida adulta cada vez llega más tarde*](https://filasycolumnas.substack.com/p/el-primer-escalon-hacia-la-vida-adulta) publicado en mi newsletter personal [FILAS Y COLUMNAS](https://filasycolumnas.substack.com/).
 
 ---
 
